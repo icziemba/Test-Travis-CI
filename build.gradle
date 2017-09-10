@@ -7,9 +7,6 @@ dependencies {
     testCompile "junit:junit:4.11"
 }
 test {
-    testLogging {
-        events "failed"
-        exceptionFormat "short"
-    }
+    systemProperties 'property': 'value'
 }
 mainClassName = "HelloWorld"
