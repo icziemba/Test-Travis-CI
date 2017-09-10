@@ -1,8 +1,18 @@
 apply plugin: "java"
 apply plugin: "application"
-apply plugin: "eclipse"
 
+version = "0.0.1"
 mainClassName = "HelloWorld"
+archivesBaseName = "HelloWorld"
+
+// https://en.wikipedia.org/wiki/JAR_(file_format)
+jar {
+	manifest {
+        attributes("Implementation-Title": "HelloWorld",
+                   "Implementation-Version": version,
+                   "Main-Class": mainClassName)
+	}
+}
 
 repositories {
     mavenCentral()
@@ -14,9 +24,6 @@ dependencies {
 
 test {
     testLogging {
-    	// Show stdout and stderr streams
-    	showStandardStreams = true
-    	
     	// Display full event excepts
     	exceptionFormat  = "FULL"
     
