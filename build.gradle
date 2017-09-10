@@ -2,7 +2,12 @@ apply plugin: "java"
 apply plugin: "application"
 apply plugin: "eclipse"
 
-logging.captureStandardOutput LogLevel.INFO
+task logInfo {
+    logging.captureStandardOutput LogLevel.INFO
+    doFirst {
+        println 'A task message which is logged at INFO level'
+    }
+}
 
 repositories {
     mavenCentral()
