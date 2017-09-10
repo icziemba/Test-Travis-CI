@@ -1,12 +1,17 @@
 apply plugin: "java"
 apply plugin: "application"
 apply plugin: "eclipse"
+
+logging.captureStandardOutput LogLevel.INFO
+
 repositories {
     mavenCentral()
 }
+
 dependencies {
     testCompile "junit:junit:4.11"
 }
+
 test {
     testLogging {
     	// Log the following events
@@ -16,7 +21,3 @@ test {
     	info.events = ["FAILED", "SKIPPED"]
     }
 }
-task logInfo {
-    logging.captureStandardOutput LogLevel.INFO
-}
-mainClassName = "HelloWorld"
