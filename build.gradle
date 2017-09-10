@@ -14,6 +14,12 @@ dependencies {
 
 test {
     testLogging {
+    	// Show stdout and stderr streams
+    	showStandardStreams = true
+    	
+    	// Display full event excepts
+    	exceptionFormat  = "FULL"
+    
     	// Log the following events
     	events = ["FAILED", "PASSED", "SKIPPED"]
     	
