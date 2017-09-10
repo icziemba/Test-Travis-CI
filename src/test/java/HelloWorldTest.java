@@ -20,7 +20,7 @@ public class HelloWorldTest {
 
 	@Test
 	public void testGetGreetings() {
-		assertNull("Hello world should return a greeting", helloWorld.getGreeting());
+		assertNotNull("Hello world should return a greeting", helloWorld.getGreeting());
 	}
 
 }
