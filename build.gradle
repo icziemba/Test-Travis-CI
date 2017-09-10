@@ -12,12 +12,8 @@ dependencies {
     testCompile "junit:junit:4.11"
 }
 
-allprojects {
-	tasks.withType(Exec) {
-		doFirst {
-			println commandLine
-		}
-	}
+compileJava {
+	println "Does this work?"
 }
 
 test {
