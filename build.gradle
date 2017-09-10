@@ -9,6 +9,7 @@ dependencies {
 test {
     testLogging {
     	events "FAILED", "PASSED", "SKIPPED"
+    	info.events = ["FAILED", "SKIPPED"]
     }
 }
 mainClassName = "HelloWorld"
