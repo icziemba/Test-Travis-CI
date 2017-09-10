@@ -8,7 +8,10 @@ dependencies {
 }
 test {
     testLogging {
-    	events "FAILED", "PASSED", "SKIPPED"
+    	// Log the following events
+    	events = ["FAILED", "PASSED", "SKIPPED"]
+    	
+    	// Only display output/error for the following events
     	info.events = ["FAILED", "SKIPPED"]
     }
 }
