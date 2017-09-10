@@ -12,10 +12,6 @@ dependencies {
     testCompile "junit:junit:4.11"
 }
 
-compileJava {
-	println "Does this work?"
-}
-
 test {
     testLogging {
     	// Log the following events
